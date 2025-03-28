@@ -57,6 +57,9 @@
   "targetDefaults": {
     "test": {
       "dependsOn": ["^build"]
+    },
+    "serve": {
+      "executor": "nx:run-commands"
     }
   },
   "generators": {

@@ -1,0 +1,46 @@
+{
+  "name": "backend-django",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/backend-django/src",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/backend-django",
+        "commands": [
+          "python3 -m venv venv || true",
+          "source venv/bin/activate && python3 src/main.py"
+        ],
+        "parallel": false
+      }
+    },
+    "install": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/backend-django",
+        "commands": [
+          "python3 -m venv venv || true",
+          "source venv/bin/activate && python3 -m pip install --upgrade pip",
+          "source venv/bin/activate && python3 -m pip install -r requirements.txt"
+        ],
+        "parallel": false
+      }
+    },
+    "django-init": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/backend-django",
+        "commands": [
+          "python3 -m venv venv",
+          "source venv/bin/activate && python3 -m pip install --upgrade pip",
+          "source venv/bin/activate && python3 -m pip install django",
+          "source venv/bin/activate && django-admin startproject backend .",
+          "source venv/bin/activate && python3 manage.py migrate"
+        ],
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+} 
