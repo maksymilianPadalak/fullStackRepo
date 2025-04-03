@@ -4,7 +4,13 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/fullStackRepo"
+      "path": "./apps/backend-express-e2e"
+    },
+    {
+      "path": "./apps/backend-express"
+    },
+    {
+      "path": "./apps/frontend"
     }
   ]
 }
