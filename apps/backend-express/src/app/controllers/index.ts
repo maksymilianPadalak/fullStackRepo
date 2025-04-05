@@ -1,3 +1,3 @@
-import { UserController } from './user.controller';
+import { UsersController } from './users.controller';
 
-export const userController = new UserController();
+export const usersController = new UsersController();
