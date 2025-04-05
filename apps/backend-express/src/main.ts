@@ -10,7 +10,7 @@ import routes from './app/routes';
 const app = express();
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
-
+app.use(express.json());
 app.use('/api', routes);
 
 const port = process.env.PORT || 3333;
