@@ -74,3 +74,4 @@ venv/
 .venv
 env/
 ENV/
+mcp.json
